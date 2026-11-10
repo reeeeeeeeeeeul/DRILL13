@@ -58,4 +58,5 @@ def render():
 def finish():
     global boy
     game_world.clear()
+    item_mode.reset_selection()
     boy = None

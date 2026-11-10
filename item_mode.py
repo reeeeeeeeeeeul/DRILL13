@@ -8,6 +8,11 @@ selected_ball_size = 21
 item_select_image = None
 
 
+def reset_selection():
+    global selected_ball_size
+    selected_ball_size = 21
+
+
 def init():
     global item_select_image
 
