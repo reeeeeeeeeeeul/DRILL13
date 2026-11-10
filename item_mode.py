@@ -4,7 +4,7 @@ import game_framework
 import game_world
 
 
-selected_ball_size = None
+selected_ball_size = 21
 item_select_image = None
 
 
@@ -40,10 +40,13 @@ def handle_events():
             game_framework.pop_mode()
         elif event.type == SDL_KEYDOWN and event.key == SDLK_1:
             selected_ball_size = 21
+            game_framework.pop_mode()
         elif event.type == SDL_KEYDOWN and event.key == SDLK_2:
             selected_ball_size = 41
+            game_framework.pop_mode()
         elif event.type == SDL_KEYDOWN and event.key == SDLK_0:
             selected_ball_size = None
+            game_framework.pop_mode()
 
 
 def pause():
