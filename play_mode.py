@@ -13,14 +13,14 @@ def handle_events():
     event_list = get_events()
     for event in event_list:
         if event.type == SDL_QUIT:
-            running = False
+            game_framework.quit()
         elif event.type == SDL_KEYDOWN and event.key == SDLK_ESCAPE:
             import title_mode
             game_framework.change_mode(title_mode)
         elif event.type == SDL_KEYDOWN and event.key == SDLK_p:
             game_framework.push_mode(pause_mode)
         elif event.type == SDL_KEYDOWN and event.key == SDLK_i:
-            game_framework.push_mode(item_mode)
+            game_framework.push_mode(item_mode, pause_current=False)
         else:
             boy.handle_event(event)
 
